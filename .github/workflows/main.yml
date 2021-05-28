@@ -15,6 +15,6 @@ jobs:
       with:
         github_access_token: ${{ secrets.ACCESS_TOKEN }}
         build_configuration: production
-        base_href: /photondigikey/   # make sure this corresponds to https://<your_username>.github.io/<base_href>/
+        base_href: /photondigikey/
         deploy_branch: gh-pages # The branch the action should deploy to.
         angular_dist_build_folder: dist/photondigikey # The folder where your project is supposed to be after running ng build by the action.
