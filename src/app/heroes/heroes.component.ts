@@ -8,7 +8,7 @@ import {Apollo, gql} from 'apollo-angular';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
-  rates: any[] | undefined 
+  heroes: any[] | undefined 
   loading = true;
   error: any;
 
@@ -19,15 +19,15 @@ export class HeroesComponent implements OnInit {
       .watchQuery({
         query: gql`
           {
-            rates(currency: "USD") {
-              currency
-              rate
+            heroes {
+              heroTitle
+              heroBody
             }
           }
         `,
       })
       .valueChanges.subscribe((result: any) => {
-        this.rates = result?.data?.rates;
+        this.heroes = result?.data?.heroes;
         this.loading = result.loading;
         this.error = result.error;
       });

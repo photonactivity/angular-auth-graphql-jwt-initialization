@@ -3,7 +3,7 @@ import {APOLLO_OPTIONS} from 'apollo-angular';
 import {ApolloClientOptions, InMemoryCache} from '@apollo/client/core';
 import {HttpLink} from 'apollo-angular/http';
 
-const uri = 'https://48p1r2roz4.sse.codesandbox.io'; // our GraphQL API
+const uri = 'https://photondances.herokuapp.com/graphql'; // our GraphQL API
 export function createApollo(httpLink: HttpLink): ApolloClientOptions<any> {
   return {
     link: httpLink.create({uri}),

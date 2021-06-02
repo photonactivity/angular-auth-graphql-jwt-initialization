@@ -29,7 +29,7 @@ import { HeroesComponent } from './heroes/heroes.component';
         return {
           cache: new InMemoryCache(),
           link: httpLink.create({
-            uri: 'https://48p1r2roz4.sse.codesandbox.io',
+            uri: 'https://photondances.herokuapp.com/graphql',
           }),
         };
       },

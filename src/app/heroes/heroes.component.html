@@ -1,12 +1,13 @@
-<H1>this is test page</H1>
+<H1>connect to the server</H1>
 <div *ngIf="loading">
-    Loading...
+  Loading...
+</div>
+<div *ngIf="error">
+  Error :(
+</div>
+<div *ngIf="heroes">
+  <div *ngFor="let hero of heroes">
+    <p>{{ hero.heroTitle }}<a>服务器启动成功</a></p>
+    <p>{{ hero.heroBody }}<a>数据服务器启动成功</a></p>
   </div>
-  <div *ngIf="error">
-    Error :(
-  </div>
-  <div *ngIf="rates">
-    <div *ngFor="let rate of rates">
-      <p>{{ rate.currency }}: {{ rate.rate }}</p>
-    </div>
-  </div>
+</div>
